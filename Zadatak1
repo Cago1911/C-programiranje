@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+
+    int A[5] = { 1,2,3,4,5 };
+    int B[5], C[5];
+    int length = sizeof(A) / sizeof(A[0]);
+    int index,broj=0,loop,i;
+    //Kopiranje vrijednosti niza A[] u niz B[] 
+    for (i = 0; i < length; i++) {
+        B[i] = A[i];
+    }
+    printf("ISPIS NIZA B:");
+    for (index = 0; index < 5; index++) {
+        printf(" %d. element niza je %d \n", index + 1, B[index]);
+    }
+    //Inicijalizacija niza C vrijednostima 10, 14, 15, 19 i 25           
+    for (i = 0; i < 5; i++)
+    {
+        printf("Unesite %d. clan niza:", broj+1);
+        scanf_s("%d",&C[i]);
+        broj++;
+    }
+    printf("ISPIS NIZA A I A OBRNUTO:");
+    //Ispis niza A[] u zadanom i obrnutom redoslijedu
+    for (index = 0; index < 5; index++) {
+        printf(" %d. element niza je %d \n", index + 1, A[index]);
+    }
+    for (loop = 4; loop >= 0; loop--)
+    {
+        printf("%d ", A[loop]);
+    }
+
+    return 0;
+
+}
